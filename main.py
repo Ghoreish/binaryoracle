@@ -19,7 +19,12 @@ while True:
             if l[i:] in l[:-1]:
                 c=1
                 if l[i:]+"1" in l and l[i:]+"0" in l:
-                    a=random.randint(0,1)
+                    while l[i:]+"1" in l and l[i:]+"0" in l:
+                        i+=1
+                    if l[i:]+"1" in l:
+                        a=1
+                    else:
+                        a=0
                 else:
                     if l[i:]+"1" in l:
                         a=1
