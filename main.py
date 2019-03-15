@@ -18,15 +18,16 @@ while True:
         for i in range(1,len(l)-1):
             if l[i:] in l[:-1]:
                 c=1
-                if l[i:]+"1" in l and l[i:]+"0" in l:
-                    while l[i:]+"1" in l and l[i:]+"0" in l:
-                        i+=1
-                    if l[i:]+"1" in l:
+                if l[i:]+"1" in l[:-1] and l[i:]+"0" in l[:-1]:
+                    p=0
+                    while l[i:]+"1" in l[p:-1] and l[i:]+"0" in l[p:-1]:
+                        p+=1
+                    if l[i:]+"1" in l[p:-1]:
                         a=1
                     else:
                         a=0
                 else:
-                    if l[i:]+"1" in l:
+                    if l[i:]+"1" in l[:-1]:
                         a=1
                     else:
                         a=0
