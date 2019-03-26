@@ -17,8 +17,6 @@ while True:
     if len(l)>=3:
         for i in range(1,len(l)-1):
             if l[i:] in l[:-1]:
-                print(l,l[i:],l[:-1])
-                print(i)
                 c=1
                 if l[i:]+"1" in l and l[i:]+"0" in l:
                     p=0
